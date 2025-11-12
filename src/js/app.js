@@ -33,7 +33,8 @@ function render(variables = {}) {
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>Lucy Boilett</h1>
+          <h1>${variables.name ||
+            "Pretty Spider" + " " + (variables.lastName || "Spider")} </h1>
           <h2>Web Developer</h2>
           <h3>Miami, USA</h3>
           <ul class="position-right">
@@ -54,9 +55,11 @@ window.onload = function() {
     // if includeCover is true the algorithm should show the cover image
     includeCover: true,
     // this is the image's url that will be used as a background for the profile cover
-    background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da",
+    background:
+      "https://images.pexels.com/photos/696644/pexels-photo-696644.jpeg",
     // this is the url for the profile avatar
-    avatarURL: "https://randomuser.me/api/portraits/women/42.jpg",
+    avatarURL:
+      "https://images.pexels.com/photos/68186/jumping-spider-tarantula-bird-spider-insect-68186.jpeg",
     // social media bar position (left or right)
     socialMediaPosition: "position-left",
     // social media usernames
